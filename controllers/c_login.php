@@ -40,8 +40,8 @@ include_once 'c_koneksi.php';
             $data = mysqli_fetch_assoc($query);
 
 
-                if (data){
-                    if(password_verify($pass, $data, ['password'])){
+                if ($data){
+                    if(password_verify($pass, $data['password'])){
 
 
                         if($data['role'] == 'admin'){
