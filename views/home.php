@@ -1,5 +1,12 @@
 <?php 
 
+include "../controllers/c_login.php";
+
+
+$data = $_SESSION["data"];
+$nama = $_SESSION["nama"] = $data['nama'];
+$role = $_SESSION["role"] = $data['role'];
+
 include_once "template/sidebar.php";
 include_once "template/header.php";
 include_once "template/footer.php";
@@ -185,7 +192,7 @@ include_once "template/footer.php";
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Adit batagor</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                 <img class="img-profile rounded-circle"
                                     src="../assets/img/undraw_profile.svg">
                             </a>
@@ -221,10 +228,10 @@ include_once "template/footer.php";
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Selamat datang <?= $nama," ", $role ?></h1>
 
                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
+                    <!-- <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
                         </div>
@@ -251,7 +258,7 @@ include_once "template/footer.php";
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <!-- /.container-fluid -->
