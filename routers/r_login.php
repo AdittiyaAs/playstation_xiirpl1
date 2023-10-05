@@ -30,13 +30,6 @@ $login  = new c_login();
                 $pass = $_POST['pass'];
             
                 
-                
-                // // if($email != $pass) {
-                //     echo "<script> alert('Salah komtol');
-                //     document.location.href '../index.php';
-                //     </script>";
-                // // } 
-                
                 $login->login($email, $pass);
             
             }elseif ($_GET['aksi'] == 'logout'){

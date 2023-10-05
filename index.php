@@ -31,7 +31,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     
-                    <div class="col-lg-12">
+                     <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Login</h1>
@@ -40,15 +40,15 @@
                                 
                     
 
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="email" name="email"
+                               <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="email" placeholder="Email" name="email"
                                         >
                                 </div> 
 
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user" id="pass" name="pass" 
+                                    <input type="password" class="form-control form-control-user" id="pass" placeholder="Password" name="pass" 
                                         >
-                                </div>
+                                </div> 
 
                                 
                                 <!-- <div class="form-group">

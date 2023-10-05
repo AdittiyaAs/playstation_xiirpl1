@@ -19,19 +19,51 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="home.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
 
         </li>
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item active">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
-        </li>
+        <?php if ($role == "user" ) : ?>
+            
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tabel.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Barang</span></a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="transaksi2.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Transaksi</span></a>
+                </li>
+
+                
+                <?php endif; ?>
+                
+                
+                <?php if ($role == "admin" ) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="barang.php">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Barang</span>
+                        </a>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="penyewaan.php">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Penyewaan</span>
+                        </a>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="Transaksi.php">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Transaksi</span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

@@ -90,8 +90,8 @@ include_once "template/footer.php";
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">agustus 27, 2023</div>
+                                        <span class="font-weight-bold">agus mistis</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -192,7 +192,7 @@ include_once "template/footer.php";
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $nama; ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="../assets/img/undraw_profile.svg">
                             </a>
@@ -212,10 +212,10 @@ include_once "template/footer.php";
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
+                        <a class="dropdown-item" href="../routers/r_login.php?aksi=logout" >
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
                             </div>
                         </li>
 
@@ -230,8 +230,8 @@ include_once "template/footer.php";
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Selamat datang <?= $nama," ", $role ?></h1>
 
-                    <!-- DataTales Example -->
-                    <!-- <div class="card shadow mb-4">
+                  <!--   DataTales Example 
+                 <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
                         </div>
@@ -241,27 +241,37 @@ include_once "template/footer.php";
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
-                                            <th>Kelas</th>
-                                            <th>Nilai</th>
-                                            <th>Aksi</th>
+                                            <th>Qty</th>
+                                            <th>Harga</th>
+                                            <th>Gambar</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     
                                     <tbody>
                                         <tr>
-                                            <td>Oin</td>
-                                            <td>XII-RPL1</td>
-                                            <td>80</td>
-                                            <td>EDIT | DELETE</td>
+                                            <td>Gudang Garam</td>
+                                            <td>2</td>
+                                            <td>48.000</td>
+                                            <td>garpitt</td>
+                                            <td>edit | hapus</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Magnum Filter</td>
+                                            <td>1</td>
+                                            <td>23.500</td>
+                                            <td>manum</td>
+                                            <td>edit | hapus</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                    </div> -->
+                    </div> 
 
                 </div>
-                <!-- /.container-fluid -->
+                 /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
@@ -270,7 +280,7 @@ include_once "template/footer.php";
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>kopihideng &copy; meipan magrib</span>
                     </div>
                 </div>
             </footer>
