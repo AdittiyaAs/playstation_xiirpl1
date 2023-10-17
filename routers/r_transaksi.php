@@ -6,6 +6,7 @@ $transaksi = new c_transaksi();
 
 if ($_GET["aksi"] == "edit") {
     $id = $_POST["id"];
+    $tanggal= $_POST["tanggal"];
     $nama_penyewa = $_POST["nama_penyewa"];
     $jenis_playstation = $_POST["jenis_playstation"];
     $jumlah_biling = $_POST["jumlah_biling"];

@@ -238,6 +238,7 @@ $baru = new c_transaksi();
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Tanggal</th>
                                     <th>Nama Penyewa</th>
                                     <th>Jenis Playstation</th>
                                     <th>Jumlah Biling</th>
@@ -248,6 +249,7 @@ $baru = new c_transaksi();
                             <tfoot>
                                 <tr>
                                     <th>No</th>
+                                    <th>Tanggal</th>
                                     <th>Nama Penyewa</th>
                                     <th>Jenis PlayStation</th>
                                     <th>Jumlah Biling</th>
@@ -272,6 +274,7 @@ $baru = new c_transaksi();
                             <?php foreach ($baru->read() as $read) : ?>
                                 <tr>
                                         <td><?= $i; ?></td>
+                                        <td><?= $read->tanggal ?></td>
                                         <td><?= $read->nama_penyewa ?></td>
                                         <td><?= $read->jenis_playstation?></td>
                                         <td><?= $read->jumlah_biling?></td>

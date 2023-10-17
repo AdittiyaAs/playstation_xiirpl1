@@ -229,9 +229,7 @@ include_once "template/sidebar.php"; ?>
                             <div class="form-group ">
                                 <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nama PlayStation" name="nama_barang">
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Jumlah Biling" name="qty">
-                            </div>
+                            
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Harga Perjam`" name="harga">
                             </div>

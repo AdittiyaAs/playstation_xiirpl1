@@ -244,7 +244,6 @@ $baru = new c_barang();
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Qty</th>
                                     <th>Harga</th>
                                     <th>Gambar</th>
                                     <th>Aksi</th>
@@ -254,7 +253,6 @@ $baru = new c_barang();
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Qty</th>
                                     <th>Harga</th>
                                     <th>Gambar</th>
                                     <th>Aksi</th>
@@ -278,7 +276,6 @@ $baru = new c_barang();
                                 <tr>
                                         <td><?= $i; ?></td>
                                         <td><?= $read->nama_barang ?></td>
-                                        <td><?= $read->qty ?></td>
                                         <td><?= 'Rp. ' . number_format($read->harga, 0, '', '.'); ?></td>
                                         <td>
                                             <img src="../assets/img/<?= $read->photo ?>" alt="" width="50px" height="50px">

@@ -2,10 +2,10 @@
 include_once "c_koneksi.php";
 class c_barang
 {
-    public function insert($id, $nama_barang, $qty, $harga, $photo)
+    public function insert($id, $nama_barang, $harga, $photo)
     {
         $conn = new c_koneksi();
-        $query = "INSERT INTO barang VALUES ('$id', '$nama_barang', '$qty', '$harga', '$photo')";
+        $query = "INSERT INTO barang VALUES ('$id', '$nama_barang', '$harga', '$photo')";
         $data = mysqli_query($conn->conn(), $query);
     }
 
@@ -23,9 +23,7 @@ class c_barang
         }
 
         // mengembalikan nilai
-        if (!empty($rows)) {
-            return $rows;
-        }
+    return $rows;
     }
 
     public function edit($id)   
@@ -41,11 +39,11 @@ class c_barang
         return $rows;
     }
 
-    public function update($id, $nama_barang, $qty, $harga, $photo)
+    public function update($id, $nama_barang, $harga, $photo)
     {
         $conn = new c_koneksi();
         // perintah untuk update data dari barang 
-        $query = "UPDATE barang SET nama_barang='$nama_barang', qty='$qty', harga='$harga', photo='$photo' WHERE id = $id";
+        $query = "UPDATE barang SET nama_barang='$nama_barang', harga='$harga', photo='$photo' WHERE id = $id";
         $data = mysqli_query($conn->conn(), $query);
     }
 

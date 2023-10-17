@@ -236,9 +236,6 @@ include_once "template/sidebar.php";
                                 <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nama Barang" name="nama_barang" value="<?= $edit->nama_barang ?>">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Jumlah" name="qty"  value="<?= $edit->qty ?>">
-                            </div>
-                            <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Harga/satuan" name="harga" value="<?= $edit->harga ?>">
                             </div>
                             <input type="file" name="photo" id="photo" value="<?= $edit->photo ?>" >

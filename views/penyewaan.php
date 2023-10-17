@@ -1,10 +1,13 @@
 <?php include "../controllers/c_login.php";
+include_once "../controllers/c_barang.php";
+$jenis = new c_barang ();
 
 $data = $_SESSION['data'];
 $nama = $_SESSION['nama'] = $data['nama'];
 $role = $_SESSION['role'] = $data['role'];
 include_once "template/header.php";
 include_once "template/sidebar.php"; ?>
+
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
@@ -81,23 +84,27 @@ include_once "template/sidebar.php"; ?>
                     <form class="user" action="../routers/r_penyewaan.php?aksi=sewa" method="post" enctype="multipart/form-data">
                         <div class="col-sm-12 mb-3 mb-sm-0">
                             <input type="text" name="id" id="id" hidden>
+                           
+                            <div class="form-group ">
+                                <input type="date" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Tanggal" name="tanggal">
+                            </div>
                             <div class="form-group ">
                                 <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nama Penyewa" name="nama_penyewa">
                             </div>
                             <div class="form-group col-sm-10 mb-5 mb-sm-3">
+
                                 <select name="jenis_playstation" id="jenis_playstation" class="select-control select-control-user col-sm-3" >
                                     <option value="Jenis PlayStation">Jenis PlayStation</option>
-                                    <option value="PlayStation 1">PlayStation 1</option>
-                                    <option value="PlayStation 2">PlayStation 2</option>
-                                    <option value="PlayStation 3">PlayStation 3</option>
-                                    <option value="PlayStation 4">PlayStation 4</option>
-                                    <option value="PlayStation 5">PlayStation 5</option>
+                                    <?php foreach($jenis->read() as $read) : ?>
+                                    <option value="<?= $read->id ?>"> <?= $read->nama_barang ?></option>
+                                    <?php endforeach;?>
+                                  
                                 <select>
 
                                 
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Jumlah Biling" name="jumlah_biling">
+                                <input type="number" class="form-control form-control-user" id="exampleInputPassword" placeholder="Jumlah Biling" name="jumlah_biling">
                             </div>
                             
                             <br>
