@@ -23,7 +23,7 @@ class c_barang
         }
 
         // mengembalikan nilai
-    return $rows;
+    return $rows;mm 
     }
 
     public function edit($id)   
